@@ -1,5 +1,4 @@
 /* globals.css */
-
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
@@ -12,27 +11,55 @@ body {
 header {
   display: flex;
   align-items: center;
-  font-family: Garamond, 'serif';
   justify-content: space-between;
-  padding: 2rem 10rem; /* Adjust padding as needed */
+  padding: 0 7em; /* Remove padding */
   background-color: #161616; /* Add a background color for the header */
   color: #fce8e8; /* Set text color */
-  border-bottom-left-radius: 0px; /* Add rounded corners to the bottom left */
-  border-bottom-right-radius: 0px; /* Add rounded corners to the bottom right */
+  border-bottom-left-radius: 20px; /* Add rounded corners to the bottom left */
+  border-bottom-right-radius: 20px; /* Add rounded corners to the bottom right */
+  width: 100%; /* Make the header full width */
+  height: 105px; /* Set a fixed height */
 }
 
 /* Navigation styles */
 header ul {
-  flex: 1; /* Allow the navigation to take the remaining space */
+  font-size: 17px;
+  flex: 2; /* Allow the navigation to take the remaining space */
   list-style: none;
   display: flex;
-  justify-content: flex-end; /* Align navigation items to the right */
-  gap: 2em; /* Adjust the gap between navigation items */
+  gap: 2.5em; /* Adjust the gap between navigation items */
+}
+
+header > div {
+  flex: 1; /* Each direct child of header (logo, nav, cart) takes up equal space */
+  display: flex; /* Make them flex containers */
+  align-items: center; /* Center items vertically */
+  height: 100%;
+}
+
+header img {
+  max-width: 140px;
+  flex-shrink: 0;
+  height: auto;
 }
 
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+header li::after {
+  transition: background-color 0.5s ease-in-out, border-bottom 0.5s ease; /* Add a smooth transition effect */
+}
+
+/* Hover effect */
+header li:hover::after {
+  background-color: #ffffff; /* Darken the underline color on hover */
+}
+
+header li {
+  margin-right: 1rem; /* Apply margin instead of @apply mr-4 */
+  position: relative; /* Add relative positioning */
+}
+
+/* Hover effect */
+header li:hover a {
+  color: white; /* Darken the text color on hover */
+  border-bottom: 2px solid #fff; /* Add underline effect on hover */
 }

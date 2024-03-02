@@ -1,16 +1,20 @@
-import { Inter } from "next/font/google";
+import { Roboto_Slab } from "next/font/google";
 import "./globals.css";
 import { menu } from "./menuRoutes"
 import Link from "next/link";
 import ShoppingCart from "./shoppingCart"
 import './globalicons.css'
 import type { Metadata } from "next";
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: 'Kord Keyboards',
   description: 'kord keyboards',
 }
+
+
+const roboto = Roboto_Slab({
+  subsets: ['latin'],
+})
 
 export default function RootLayout({
   children,
@@ -19,19 +23,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <header>
-          <div>
+          <div> 
         <Link href="/">
           <img src="Kord Logo White.png" className="h-50px" />
         </Link>
-        </div>
-        <div>
-          <nav>
+  
+          <nav className="pl-16">
             <ul>
               
             {Object.entries(menu).map(([label, path]) => (
-                <li key={label} className="text-xl">
+                <li key={label} className={`${roboto.className}`}>
                   <Link href={path}>
                     {label}
                   </Link>
@@ -41,7 +44,7 @@ export default function RootLayout({
           </nav>
         </div>
         
-        <div>
+        <div className="pr-0 justify-end">
         <ShoppingCart/> 
         </div>
         </header> 
