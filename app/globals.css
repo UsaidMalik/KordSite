@@ -21,20 +21,13 @@ header {
   border-bottom-right-radius: 0px; /* Add rounded corners to the bottom right */
 }
 
-/* Logo styles */
-header img {
-  width: 50px; /* Set the width of the logo as needed */
-  height: auto; /* Maintain aspect ratio */
-}
-
 /* Navigation styles */
 header ul {
   flex: 1; /* Allow the navigation to take the remaining space */
   list-style: none;
-  font-size: 1.2em;
   display: flex;
   justify-content: flex-end; /* Align navigation items to the right */
-  gap: 20px; /* Adjust the gap between navigation items */
+  gap: 2em; /* Adjust the gap between navigation items */
 }
 
 
