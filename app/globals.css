@@ -63,3 +63,9 @@ header li:hover a {
   color: white; /* Darken the text color on hover */
   border-bottom: 2px solid #fff; /* Add underline effect on hover */
 }
+
+footer {
+  padding: 0 10em; /* Remove padding */
+  border-top-left-radius: 20px; /* Add rounded corners to the bottom left */
+  border-top-right-radius: 20px; /* Add rounded corners to the bottom right */
+}
