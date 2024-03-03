@@ -76,13 +76,12 @@ export default function RootLayout({
         <ul className="flex space-x-4">
           {Object.entries(socials).map(([label, path]) => (
             <li key={label} className={`${roboto.className}`}>
-              <Link href={path}>
+              <Link href={path} target="_blank">
                 {SocialIcon(label)}
               </Link>
             </li>
           ))}
         </ul>
-
         <div className="text-sm pr-16">
           © 2024, Kord Powered by The Kommunity
         </div>
