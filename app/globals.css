@@ -15,10 +15,11 @@ header {
   padding: 0 7em; /* Remove padding */
   background-color: #161616; /* Add a background color for the header */
   color: #fce8e8; /* Set text color */
-  border-bottom-left-radius: 20px; /* Add rounded corners to the bottom left */
-  border-bottom-right-radius: 20px; /* Add rounded corners to the bottom right */
+
   width: 100%; /* Make the header full width */
   height: 105px; /* Set a fixed height */
+  box-shadow: 0 -10px 20px 10px rgba(255, 255, 255, 0.5);
+  z-index: 2;
 }
 
 /* Navigation styles */
