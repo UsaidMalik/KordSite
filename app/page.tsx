@@ -27,11 +27,11 @@ export default function Home() {
     
     <div className="absolute inset-10 flex flex-col items-center justify-center text-center" style={{pointerEvents: "none"}}>
       <p className="text-white text-4xl font-bold drop-shadow-2xl">
-        Turn Your Setup Into A Cultural Masterpiece
+        Transform Your Setup Into A Cultural Masterpiece
       </p>
       <br>
       </br>
-      <Link href="my-cart" className="bg-white px-4 py-2 rounded-full text-lg" style={{pointerEvents: "auto"}}>DISCOVER</Link>
+      <Link href="my-cart" className="px-4 py-2 rounded-full text-lg transition duration-700 ease-in-out bg-white hover:text-gray-800 hover:bg-gray-300 hover:text-base" style={{pointerEvents: "auto"}}>DISCOVER</Link>
     </div>
 
   </div>
