@@ -3,18 +3,19 @@ import Link  from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex justify-center items-center overflow-hidden h-96">
+    <div className="flex justify-center items-center overflow-hidden h-96 bg-black">
       
-    <div className="w-1/2 relative h-full">
+    <div className="w-1/2 relative h-full opacity-50 hover:opacity-100 transition-opacity duration-500 ease-in-out">
           <Image 
           src="/main-page/2.jpg" 
           alt="Kord Obsidian Sengakuji Keycap"
           objectFit="cover"
           fill={true}
+          className=""
           />
-        </div>
+    </div>
 
-        <div className="w-1/2 relative h-full">
+     <div className="w-1/2 relative h-full opacity-50 hover:opacity-100 transition-opacity duration-500 ease-in-out">
           <Image 
           src="/main-page/10.jpg" 
           objectFit="cover"
@@ -24,11 +25,13 @@ export default function Home() {
     </div>
 
     
-    <div className="absolute inset-0 flex flex-col items-center  justify-center text-center">
-      <p>
+    <div className="absolute inset-10 flex flex-col items-center justify-center text-center" style={{pointerEvents: "none"}}>
+      <p className="text-white text-4xl font-bold drop-shadow-2xl">
         Turn Your Setup Into A Cultural Masterpiece
       </p>
-      <Link href="my-cart">DISCOVER</Link>
+      <br>
+      </br>
+      <Link href="my-cart" className="bg-white px-4 py-2 rounded-full text-lg" style={{pointerEvents: "auto"}}>DISCOVER</Link>
     </div>
 
   </div>
