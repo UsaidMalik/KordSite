@@ -3,8 +3,14 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+
 body {
   background-color: rgba(232, 243, 246, 0.492);
+  display: grid;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  grid-template-rows: auto 1fr auto;
 }
 
 /* Header styles */
@@ -66,6 +72,11 @@ header li:hover a {
 }
 
 footer {
+  background-color: rgb(106, 205, 111);
+  color: white;
+  display: flex;
+  top: 100%;
+  position: relative;
   padding: 0 10em; /* Remove padding */
   border-top-left-radius: 20px; /* Add rounded corners to the bottom left */
   border-top-right-radius: 20px; /* Add rounded corners to the bottom right */

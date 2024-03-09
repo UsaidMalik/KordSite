@@ -36,7 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="flex flex-col min-h-screen">
+      <body>
         <header>
           <div> 
         <Link href="/">
@@ -63,13 +63,13 @@ export default function RootLayout({
         </div>
         </header>
 
-        <main className="flex-grow mb-auto h-10">
+        <main>
 
           {children}  
         </main>  
           
 
-    <footer className="bg-gray-800 text-white p-4 h-24 flex justify-between items-center">
+    <footer className="p-4 h-24">
 
       <div className={`flex justify-between w-full ${roboto.className} pl-16`}>
 
