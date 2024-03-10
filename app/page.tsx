@@ -1,6 +1,7 @@
+"use client"
 import Image from "next/image";
 import Link  from "next/link";
-import ProductDisplay from "./_displayProducts";
+import ProductDisplay from "./_components/_displayProducts";
 
 export default function Home() {
 
@@ -46,7 +47,7 @@ export default function Home() {
         Featured Items
       </p>
       <br></br>
-    <ProductDisplay rows={1} columns={3} productThumbnailPaths={["Obsid"]}/>
+    <ProductDisplay rows={1} columns={3} products={["Obsidian Sengakuji"]}/>
     </div>
   </div>
   );

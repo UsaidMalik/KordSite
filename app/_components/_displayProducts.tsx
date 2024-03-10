@@ -4,13 +4,13 @@ import React from 'react';
 interface DisplayProductProps{
     rows: Number,
     columns: Number, 
-    productThumbnailPaths:  string[]
+    products:  string[]
 }
   
 
-const ProductDisplay: React.FC<DisplayProductProps>  = ({rows, columns, productThumbnailPaths}) => {
-
-    const productCards = productThumbnailPaths.map((thumbnailPath) => (<ProductCard key={thumbnailPath} imageLocation={thumbnailPath}/>)) 
+const ProductDisplay: React.FC<DisplayProductProps>  = ({rows, columns, products}) => {
+  
+    const productCards = products.map((productName) => (<ProductCard key={productName} productName={productName}/>)) 
 
     return (<div className={`grid grid-rows-${rows} grid-cols-${columns} gap-4`}>
     {productCards}
