@@ -1,6 +1,7 @@
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
+import "./icons.css"
 
 interface ProductImageSliderProps{
   productImagePaths: string[]
@@ -21,24 +22,33 @@ const ProductImageSlider : React.FC<ProductImageSliderProps> = ({productImagePat
         setCurrentIdx(idx);
       };
 
-   return (<div className="relative">
-   <div className="flex justify-center items-center">
-     <button onClick={prevImage} className="absolute left-0 ml-2">Prev</button>
+   return (
+   
+   <div className="relative m-0 w-96 pb-10 mx-0">
+   <div className="relative h-96 w-96">
      <Image 
        src={`/${productImagePaths[currentIdx]}`} 
        layout="fill" 
        alt={`Image of A Product`}
-       objectFit="contain" 
-       className="cursor-zoom-in"
-     />
-     <button onClick={nextImage} className="absolute right-0 mr-2">Next</button>
+       objectFit="fill" 
+       className="m-0 p-0 w-full"
+     >
+     </Image>
+     <button onClick={prevImage} className="absolute left-0 ml-1 top-1/2 prev w-8 h-8">&#10094;</button>
+     <button onClick={nextImage} className="absolute right-0 mr-1 top-1/2 next w-8 h-8">&#10095;</button>
+
    </div>
-   <div className="flex justify-center mt-4">
-     {productImagePaths.map((_, idx) => (
-       <button 
+   <div className="flex justify-center absolute bottom-0 left-1/2
+   transform -translate-x-1/2">
+     {productImagePaths.map((imgPath, idx) => (
+       <Image 
          key={idx} 
+         src={`/${imgPath}`}
+         width={30}
+         height={30}
+         alt="Image of product"
          onClick={() => selectImage(idx)} 
-         className={`h-4 w-4 mx-1 rounded-full ${currentIdx === idx ? 'bg-gray-800' : 'bg-gray-300'}`}
+         className="mx-1 hover:opacity-50 cursor-pointer transition-opacity duration-500 ease-in-out"
        />
      ))}
    </div>

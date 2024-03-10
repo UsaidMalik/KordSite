@@ -25,8 +25,30 @@ export default function Page() {
   }, []); // Dependency array
 
   return (
-    <div>
+    <div className='py-10'>
+
+      <div className='grid grid-cols-2 gap-4'> {/* this is the top images container which will be the two columns */}
+
+      <div className='flex justify-center'>{/*this here is the left side product slider stuff */}
       {productData && <ProductImageSlider productImagePaths={productData.imagePaths}/>}
+      </div>
+
+
+      
+    <div className='flex-col justify-center'>{/*this here is the right side product info */}
+      <h6>
+        {productData && productData.productFullName}
+      </h6> 
+      <h6>
+        ${productData && productData.price}
+      </h6> 
+      <p>
+        {productData && productData.description}
+      </p> 
+   </div>
+
+   </div>
+
     </div>
 
   )
