@@ -1,15 +1,13 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import products from "@/app/products";
 
 interface ProductImageSliderProps{
-  productName: string
+  productImagePaths: string[]
 }
 
-const ProductImageSlider : React.FC<ProductImageSliderProps> = ({productName}) => {
+const ProductImageSlider : React.FC<ProductImageSliderProps> = ({productImagePaths}) => {
     const [currentIdx, setCurrentIdx] = useState(0);
-    const productImagePaths = []
 
     const nextImage = () => {
         setCurrentIdx((currentIdx + 1) % productImagePaths.length);
@@ -27,7 +25,7 @@ const ProductImageSlider : React.FC<ProductImageSliderProps> = ({productName}) =
    <div className="flex justify-center items-center">
      <button onClick={prevImage} className="absolute left-0 ml-2">Prev</button>
      <Image 
-       src={productImagePaths[currentIdx]} 
+       src={`/${productImagePaths[currentIdx]}`} 
        layout="fill" 
        alt={`Image of A Product`}
        objectFit="contain" 

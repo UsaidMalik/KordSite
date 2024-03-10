@@ -1,12 +1,12 @@
 import { Roboto_Slab } from "next/font/google";
 import "./globals.css";
-import { menu } from "../data/menuRoutes"
+import { menu } from "./_lib/menuRoutes"
 import Link from "next/link";
 import ShoppingCart from "./_components/_shoppingCart"
 import './globalicons.css'
 import type { Metadata } from "next";
 import { Twitter, Instagram } from 'react-feather';
-import {socials} from "../data/socials"
+import {socials} from "./_lib/socials"
 
 export const metadata: Metadata = {
   title: 'Kord Keyboards',

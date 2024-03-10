@@ -1,13 +1,14 @@
 "use client"
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
-import {useRouter} from 'next/navigation';
+import { useState, useEffect } from 'react';
+import ProductImageSlider from './_imageSlider';
 
 export default function Page() {
-  const [data, setData] = useState(null);
-  const pathName = usePathname()
-
-  fetch(`http://localhost:3000${pathName}/api`)
+  const [productData, setData] = useState(null);
+  const pathname = usePathname()
+ 
+  useEffect(() => {
+    fetch(`http://localhost:3000${pathname}/api`)
       .then((response) => {
         if (!response.ok) {
           throw new Error('Failed to fetch data');
@@ -15,15 +16,17 @@ export default function Page() {
         return response.json(); // Parse the response data as JSON
       })
       .then((myData) => {
-        console.log(myData)
-        setData(myData);
+        console.log(myData.productData)
+        setData(myData.productData);
       })
       .catch((error) => {
         console.error(error);
       });
+  }, []); // Dependency array
 
   return (
     <div>
+      {productData && <ProductImageSlider productImagePaths={productData.imagePaths}/>}
     </div>
 
   )

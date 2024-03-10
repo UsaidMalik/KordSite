@@ -1,7 +1,7 @@
 import "../globalicons.css"
 import Link  from 'next/link';
 import Image from 'next/image'
-import products from "../../data/products.json";
+import products from "../_lib/products.json";
 
 interface ProductCardProps {
   productName: string;
