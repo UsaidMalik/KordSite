@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-const cartPage = () => {
+const Page = () => {
   
   return (
     <div>
@@ -9,4 +9,4 @@ const cartPage = () => {
   );
 };
 
-export default cartPage;
+export default Page;

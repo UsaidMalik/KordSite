@@ -25,7 +25,7 @@ const ProductImageSlider : React.FC<ProductImageSliderProps> = ({productImagePat
    return (
    
    <div className="relative m-0 w-96 pb-10 mx-0">
-   <div className="relative h-96 w-96">
+   <div className="relative w-96 h-96">
      <Image 
        src={`/${productImagePaths[currentIdx]}`} 
        layout="fill" 
