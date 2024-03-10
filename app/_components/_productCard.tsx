@@ -1,4 +1,4 @@
-import "../styles/globalicons.css"
+import "../globalicons.css"
 import Link  from 'next/link';
 import Image from 'next/image'
 import products from "../../data/products.json";

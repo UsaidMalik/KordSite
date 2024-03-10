@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import "./globalicons.css"
+import "../globalicons.css"
 import Link  from 'next/link';
 
 const ShoppingCart = () => {
