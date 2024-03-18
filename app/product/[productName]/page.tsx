@@ -2,10 +2,20 @@
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import ProductImageSlider from './_imageSlider';
+import AddToCart from '../../_components/_addToCartButton';
+import { Context } from '@/app/_components/_shoppingCart';
+import { ShoppingCart } from 'react-feather';
+import { createContext } from 'react';
+
+
+
 
 export default function Page() {
   const [productData, setData] = useState(null);
   const pathname = usePathname()
+
+  const [products, setProducts] = useState([])
+  // more context stuff 
  
   useEffect(() => {
     fetch(`http://localhost:3000${pathname}/api`)
@@ -46,10 +56,9 @@ export default function Page() {
         {productData && productData.description}
       </p> 
    </div>
-
+    <AddToCart quantity={5}/>
    </div>
 
     </div>
-
   )
 }

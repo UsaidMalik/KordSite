@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link  from "next/link";
 import ProductDisplay from "./_components/_displayProducts";
 
+
+
 export default function Home() {
 
   return (
