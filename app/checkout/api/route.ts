@@ -3,19 +3,17 @@ import { redirect } from 'next/navigation'
 export async function POST(
   req: Request,
 ) {
-  console.log("body of req is",req);
   const formData = await req.formData()
   const products = await JSON.parse(formData.get("products"))
-  let lineItems = Object.entries(products).map(([key, val]) => ({[key]: val}));
+  let lineItems = Object.entries(products).map(([key, val]) => ({price: key.toString(), quantity: val}));
   const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
   let session;
-  console.log("my products are", products)
-
-  console.log("my products are", lineItems)
  try {
       // Create Checkout Sessions from body params.
       const requestHeaders = new Headers(req.headers)
-      console.log(products)
+      console.log("my products in the route are", products)
+      console.log("my line items in the route are", lineItems)
+
       session = await stripe.checkout.sessions.create({
         line_items: lineItems,
         mode: 'payment',

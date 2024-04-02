@@ -5,10 +5,8 @@ import {promises as fs} from 'fs';
 export default async function Page({ params }: { params: { productName: string } }) {
 //  const [productData, setData] = useState(null);
   const productName = params.productName
-  console.log(productName)
   const bytes = await fs.readFile(process.cwd() + "/app/_lib/products.JSON")
   const productData = JSON.parse(bytes + '')[productName]
-  console.log(productData)
   
   return (
     <div className='py-10'>
@@ -16,7 +14,7 @@ export default async function Page({ params }: { params: { productName: string }
       <div className='grid grid-cols-2 gap-4'> {/* this is the top images container which will be the two columns */}
 
       <div className='flex justify-center mx-16'>{/*this here is the left side product slider stuff */}
-      {productData && <ProductImageSlider productImagePaths={productData.imagePaths}/>}
+        <ProductImageSlider productImagePaths={productData.imagePaths}/>
       </div>
 
     <div className='flex-col justify-center w-1/2'>{/*this here is the right side product info */}
@@ -31,7 +29,7 @@ export default async function Page({ params }: { params: { productName: string }
       </p> 
     </div>   
    </div>
-
+    <AddToCart price={productData.stripeID} quantity={1}/>
     </div>
   )
 }

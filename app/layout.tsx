@@ -32,9 +32,11 @@ export default function RootLayout({
          <MenuItemsLogo/> {/* This is here as a server component */}
         
         <div className="pr-0 justify-end">{/* Client componenet */}
-          <CartContext>
+        <CartContext>
+
             <ShoppingCart/> 
-          </CartContext>
+            </CartContext>
+
         </div>
         </header>
 
@@ -42,7 +44,6 @@ export default function RootLayout({
 
           {children}  
         </main>  
-          
       <KordFooter/> {/*Incredibly based Kord Footer, which is also a server compoenent */}
 
         </body>

@@ -20,7 +20,7 @@ const AdderToCart: React.FC<AddToCartProps>  = ({price, quantity})  => {
             ...prevProducts,
             [price]: (prevProducts[price] || 0) + quantity,
         }));
-        localStorage.setItem('products', products)
+        localStorage.setItem('products', JSON.stringify(products))
         }}> {/*js moment*/}
     Add To Cart
 </button>

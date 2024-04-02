@@ -1,8 +1,7 @@
 "use client"
 import React, { useContext } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
-import { cartContext, lineItems } from '../_components/_cartContextProvider';
-import { useEffect } from 'react';
+
 // Make sure to call `loadStripe` outside of a component’s render to avoid
 // recreating the `Stripe` object on every render.
 const stripePromise = loadStripe(
@@ -21,20 +20,11 @@ const CheckoutButton = () => {
       console.log('Order canceled -- continue to shop around and checkout when you’re ready.');
     }
   }, []);
-
-  let products;
   
-  useEffect(() => {
-    const localProducts = localStorage.getItem('products');
-    if (localProducts) {
-      products = localProducts
-    }
-  }, []);
-  
-  console.log("Json stringified products are", products);
+  const products = localStorage.getItem("products") || ""
   return (
     <form action="checkout/api" method="POST">
-      <input type="hidden" name='products' value={JSON.stringify(products)}></input>
+      <input type="hidden" name="products" value={products}/>
       <section>
         <button type="submit" role="link">
           Checkout
