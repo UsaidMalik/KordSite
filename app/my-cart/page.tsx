@@ -1,7 +1,7 @@
 "use client"
-import CartContext, { cartContext } from "../_components/_cartContextProvider";
+import CartContext, { cartContext } from "../_components/_buttons/_cartContextProvider";
 import { useContext } from "react";
-import CheckoutButton from "../_components/_checkoutButton";
+import CheckoutButton from "../_components/_buttons/_checkoutButton";
 
 const Page = () => {
   return (

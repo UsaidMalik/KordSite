@@ -15,10 +15,12 @@ const AdderToCart: React.FC<AddToCartProps>  = ({price, quantity})  => {
     <div>
         
         <button onClick={() => {
+
         setProducts((prevProducts: lineItems )=> ({
             ...prevProducts,
             [price]: (prevProducts[price] || 0) + quantity,
         }));
+        localStorage.setItem('products', products)
         }}> {/*js moment*/}
     Add To Cart
 </button>

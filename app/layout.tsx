@@ -1,14 +1,11 @@
 "use client"
 import { Roboto_Slab } from "next/font/google";
 import "./globals.css";
-import { menu } from "./_lib/menuRoutes"
 import Link from "next/link";
 import ShoppingCart from "./_components/_shoppingCart"
 import './globalicons.css'
 import type { Metadata } from "next";
-import { Twitter, Instagram } from 'react-feather';
-import {socials} from "./_lib/socials"
-import CartContext from "./_components/_cartContextProvider";
+import CartContext from "./_components/_buttons/_cartContextProvider";
 import MenuItemsLogo from "./_components/_logoMenuItems";
 import KordFooter from "./_components/_footer";
 
@@ -32,9 +29,9 @@ export default function RootLayout({
       <body>
         <header>
 
-         <MenuItemsLogo/>
+         <MenuItemsLogo/> {/* This is here as a server component */}
         
-        <div className="pr-0 justify-end">
+        <div className="pr-0 justify-end">{/* Client componenet */}
           <CartContext>
             <ShoppingCart/> 
           </CartContext>
@@ -46,7 +43,7 @@ export default function RootLayout({
           {children}  
         </main>  
           
-      <KordFooter/> {/*Incredibly based Kord Footer*/}
+      <KordFooter/> {/*Incredibly based Kord Footer, which is also a server compoenent */}
 
         </body>
     </html>

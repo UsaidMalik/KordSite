@@ -1,37 +1,15 @@
-"use client"
-import { usePathname } from 'next/navigation';
-import { useState, useEffect } from 'react';
-import ProductImageSlider from './_imageSlider';
-import AddToCart from '../../_components/_addToCartButton';
-import { ShoppingCart } from 'react-feather';
-import { createContext } from 'react';
+import ProductImageSlider from './_components/_imageSlider';
+import AddToCart from '../../_components/_buttons/_addToCartButton';
+import {promises as fs} from 'fs';
 
-
-
-
-export default function Page() {
-  const [productData, setData] = useState(null);
-  const pathname = usePathname()
-
-  // more context stuff 
- 
-  useEffect(() => {
-    fetch(`http://localhost:3000${pathname}/api`)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Failed to fetch data');
-        }
-        return response.json(); // Parse the response data as JSON
-      })
-      .then((myData) => {
-        console.log(myData.productData)
-        setData(myData.productData);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }, []); // Dependency array
-
+export default async function Page({ params }: { params: { productName: string } }) {
+//  const [productData, setData] = useState(null);
+  const productName = params.productName
+  console.log(productName)
+  const bytes = await fs.readFile(process.cwd() + "/app/_lib/products.JSON")
+  const productData = JSON.parse(bytes + '')[productName]
+  console.log(productData)
+  
   return (
     <div className='py-10'>
 
@@ -41,20 +19,17 @@ export default function Page() {
       {productData && <ProductImageSlider productImagePaths={productData.imagePaths}/>}
       </div>
 
-
-      
     <div className='flex-col justify-center w-1/2'>{/*this here is the right side product info */}
       <h6 className='text-bold text-4xl'>
-        {productData && productData.productFullName}
+        {productData.productFullName}
       </h6> 
       <h6>
-        ${productData && productData.price}
+        ${productData.price}
       </h6> 
       <p>
-        {productData && productData.description}
+        {productData.description}
       </p> 
-   </div>
-    <AddToCart price={productData && productData.stripeID} quantity={1}/>
+    </div>   
    </div>
 
     </div>

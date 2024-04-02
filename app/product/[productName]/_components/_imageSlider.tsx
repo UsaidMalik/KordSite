@@ -1,12 +1,13 @@
-
+"use client";
 import { useState } from "react";
 import Image from "next/image";
-import "./icons.css"
+import "./component-styles/slider-icons.css"
 
 interface ProductImageSliderProps{
   productImagePaths: string[]
 }
 
+{/*This is a client componenet but the paths i should get from a server componenet*/}
 const ProductImageSlider : React.FC<ProductImageSliderProps> = ({productImagePaths}) => {
     const [currentIdx, setCurrentIdx] = useState(0);
 

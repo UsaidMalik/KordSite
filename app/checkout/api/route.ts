@@ -1,6 +1,4 @@
 import { redirect } from 'next/navigation'
-import { cartContext } from '@/app/_components/_cartContextProvider';
-import { json } from 'stream/consumers';
 
 export async function POST(
   req: Request,

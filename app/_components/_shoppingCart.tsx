@@ -2,7 +2,7 @@
 import React, { useState, useContext, createContext, useEffect} from 'react';
 import "../globalicons.css"
 import Link  from 'next/link';
-import CartContext, { cartContext } from './_cartContextProvider';
+import CartContext, { cartContext } from './_buttons/_cartContextProvider';
 
 
 const ShoppingCart = () => {

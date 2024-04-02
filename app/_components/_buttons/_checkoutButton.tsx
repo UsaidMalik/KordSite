@@ -2,7 +2,7 @@
 import React, { useContext } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import { cartContext, lineItems } from '../_components/_cartContextProvider';
-
+import { useEffect } from 'react';
 // Make sure to call `loadStripe` outside of a component’s render to avoid
 // recreating the `Stripe` object on every render.
 const stripePromise = loadStripe(
@@ -22,8 +22,15 @@ const CheckoutButton = () => {
     }
   }, []);
 
-  const [products, _] = useContext(cartContext);
-
+  let products;
+  
+  useEffect(() => {
+    const localProducts = localStorage.getItem('products');
+    if (localProducts) {
+      products = localProducts
+    }
+  }, []);
+  
   console.log("Json stringified products are", products);
   return (
     <form action="checkout/api" method="POST">
