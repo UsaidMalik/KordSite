@@ -11,7 +11,7 @@ const ShoppingCart = () => {
   console.log("in cart is ", {products})
   return (
     <div>
-      <Link href="my-cart">
+      <Link href="/my-cart">
       <span className='material-symbols-outlined text-3xl'>shopping_bag</span>
       </Link>
     </div>

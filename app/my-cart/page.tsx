@@ -1,11 +1,14 @@
-import Image from "next/image"
-import AddToCart from "../_components/_addToCartButton";
+"use client"
+import CartContext, { cartContext } from "../_components/_cartContextProvider";
+import { useContext } from "react";
+import CheckoutButton from "../_components/_checkoutButton";
+
 const Page = () => {
-  
   return (
     <div>
-      Nothing here yet
-      <AddToCart quantity={6}/>
+      <CartContext>
+        <CheckoutButton/>
+      </CartContext>
     </div>
   );
 };

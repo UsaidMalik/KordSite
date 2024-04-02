@@ -4,15 +4,16 @@ import CartContext from "./_cartContextProvider";
 import AdderToCart from "./_adderToCart"
 
 interface AddToCartProps{
+    price: string,
     quantity: number
 }
-const AddToCart: React.FC<AddToCartProps>  = ({quantity})  => {
+const AddToCart: React.FC<AddToCartProps>  = ({price, quantity})  => {
     
     return (
 
     <div>
         <CartContext>
-            <AdderToCart/>
+            <AdderToCart price={price} quantity={quantity}/>
         </CartContext>
     </div>
     )

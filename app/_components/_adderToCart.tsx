@@ -1,16 +1,28 @@
 "use client"
 import React, { useContext } from "react";
-import  { cartContext } from "./_cartContextProvider";
+import  { cartContext, lineItems } from "./_cartContextProvider";
 
 
-const AdderToCart = ()  => {
+interface AddToCartProps{
+    price: string,
+    quantity: number
+}
+const AdderToCart: React.FC<AddToCartProps>  = ({price, quantity})  => {
 
     const [products, setProducts] = useContext(cartContext);
+    // products is an array of objects {price qty}
     return (
     <div>
-        <button onClick={() => {setProducts(6)}}>
-            Im a bitton
-        </button>
+        
+        <button onClick={() => {
+        setProducts((prevProducts: lineItems )=> ({
+            ...prevProducts,
+            [price]: (prevProducts[price] || 0) + quantity,
+        }));
+        }}> {/*js moment*/}
+    Add To Cart
+</button>
+
     </div>
     )
 }
