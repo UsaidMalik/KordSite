@@ -15,13 +15,16 @@ function getImages(productImageDir) {
 
 
 const products = {
-    "Obsidian Sengakuji" : {
+    "Obsidian-Sengakuji" : {
         price: 25.95,
         description: "nothing to see here",
         imageDirectoryName: "Obsidian-Sengakuji",
-        imagePaths: []
-    }
+        imagePaths: [],
+        thumbnailName: "Obsidian Sengakuji",
+        stripeID: "price_1OvbqFIajtiRYLJ07eeC9npD",
+        productFullName: "Obsidian Sengakuji Artisan Keycap",
 
+    }
 }
 
 console.log("generating products")

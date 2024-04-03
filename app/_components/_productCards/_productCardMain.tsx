@@ -9,6 +9,7 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({productName}) => {
   const productDetails = products[productName]
+  console.log(productDetails)
 
   return (
     <div>
@@ -27,7 +28,7 @@ const ProductCard: React.FC<ProductCardProps> = ({productName}) => {
         </div>
 
         <div className="text-lg">
-          {productName}
+          {productDetails.thumbnailName}
         </div>
         <div className="text-sm">
           {`$${productDetails.price}`}
