@@ -49,7 +49,7 @@ export default function Home() {
         Featured Items
       </p>
       <br></br>
-    <ProductDisplay rows={1} columns={3} products={["Obsidian Sengakuji"]}/>
+    <ProductDisplay rows={1} columns={3} products={["Obsidian-Sengakuji"]}/>
     </div>
   </div>
   );

@@ -27,9 +27,10 @@ export default async function Page({ params }: { params: { productName: string }
       <p>
         {productData.description}
       </p> 
+      <AddToCart price={productData.stripeID} quantity={1}/>
     </div>   
+    
    </div>
-    <AddToCart price={productData.stripeID} quantity={1}/>
-    </div>
+  </div>
   )
 }

@@ -1,14 +1,12 @@
-"use client"
-import CartContext, { cartContext } from "../_components/_buttons/_cartContextProvider";
-import { useContext } from "react";
 import CheckoutButton from "../_components/_buttons/_checkoutButton";
+import ProductDisplay from "../_components/_displayProducts";
 
 const Page = () => {
+
   return (
     <div>
-      <CartContext>
-        <CheckoutButton/>
-      </CartContext>
+      <ProductDisplay rows={1} columns={4} products={["Obsidian-Sengakuji"]} />
+      <CheckoutButton/>
     </div>
   );
 };

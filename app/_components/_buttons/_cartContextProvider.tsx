@@ -1,4 +1,3 @@
-import { Children, useContext } from "react";
 import { useState } from "react";
 import { createContext } from "react";
 
@@ -17,7 +16,7 @@ export default function CartContext({
   }>) {
 
     const [products, setProducts] = useState<lineItems>({})
-    console.log("in context provider is", products)
+    console.log("just got updates", products)
     return (
         <cartContext.Provider value={[products, setProducts]}>
             {children}
