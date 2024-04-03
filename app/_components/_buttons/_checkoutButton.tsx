@@ -1,4 +1,3 @@
-"use client"
 import React, { useContext } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 
@@ -21,7 +20,7 @@ const CheckoutButton = () => {
     }
   }, []);
   
-  const products = localStorage.getItem("products") || ""
+  const products = localStorage.getItem("products") || "{}"
   return (
     <form action="checkout/api" method="POST">
       <input type="hidden" name="products" value={products}/>

@@ -1,14 +1,13 @@
-import "../globalicons.css"
 import Link  from 'next/link';
 import Image from 'next/image'
-import products from "../_lib/products.json";
+import products from "../../_lib/products.json";
 
 interface ProductCardProps {
   productName: string;
 }
   
 
-const ProductCard: React.FC<ProductCardProps> = async ({productName}) => {
+const ProductCard: React.FC<ProductCardProps> = ({productName}) => {
   const productDetails = products[productName]
 
   return (

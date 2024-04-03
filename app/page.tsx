@@ -1,8 +1,7 @@
 "use client"
 import Image from "next/image";
 import Link  from "next/link";
-import ProductDisplay from "./_components/_displayProducts";
-
+import ProductDisplay from "./_components/_productCards/_displayProducts";
 
 
 export default function Home() {

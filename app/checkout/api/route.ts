@@ -5,7 +5,10 @@ export async function POST(
 ) {
   const formData = await req.formData()
   const products = await JSON.parse(formData.get("products"))
-  let lineItems = Object.entries(products).map(([key, val]) => ({price: key.toString(), quantity: val}));
+  let lineItems = [];
+  for (let price in products){
+    lineItems.push({"price": price, "quantity": products[price].qty})
+  }
   const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
   let session;
  try {

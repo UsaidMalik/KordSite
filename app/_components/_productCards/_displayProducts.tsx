@@ -1,10 +1,11 @@
-import ProductCard from './_productCard';
+import ProductCard from './_productCardMain';
 import React from 'react';
 
 interface DisplayProductProps{
     rows: Number,
     columns: Number, 
     products:  string[]
+    
 }
   
 

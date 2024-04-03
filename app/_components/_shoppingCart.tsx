@@ -2,11 +2,17 @@ import React, { useEffect, useState } from 'react';
 import "../globalicons.css"
 import Link  from 'next/link';
 
-function calcProductQuantity(){
-  return Object.values(JSON.parse(localStorage.getItem('products') || "{}"))
-  .reduce((accumulator:number, quantity) => accumulator + quantity , 0) || [];
-}
 const ShoppingCart = () => {
+
+  function calcProductQuantity(){
+    let quantity = 0;
+    const products = JSON.parse(localStorage.getItem("products") || "{}")
+    for (let key in products){
+      quantity += products[key].qty || 0
+    }
+    return quantity;
+  }
+
   const [quantity, setQuantitiy] = useState(calcProductQuantity())
   
   useEffect(() => {

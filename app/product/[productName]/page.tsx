@@ -1,5 +1,5 @@
 import ProductImageSlider from './_components/_imageSlider';
-import AddToCart from '../../_components/_buttons/_addToCartButton';
+import AddToCart from '../../_components/_buttons/_addToCart';
 import {promises as fs} from 'fs';
 
 export default async function Page({ params }: { params: { productName: string } }) {
@@ -27,7 +27,7 @@ export default async function Page({ params }: { params: { productName: string }
       <p>
         {productData.description}
       </p> 
-      <AddToCart price={productData.stripeID} quantity={1}/>
+      <AddToCart price={productData.stripeID} quantity={1} productName={productName}/>
     </div>   
     
    </div>
