@@ -1,6 +1,5 @@
 "use client"
-import React, { useContext } from "react";
-import  { cartContext, lineItems } from "./_cartContextProvider";
+import React, { useContext, useState } from "react";
 
 interface AddToCartProps{
     price: string,
@@ -8,7 +7,7 @@ interface AddToCartProps{
 }
 const AdderToCart: React.FC<AddToCartProps>  = ({price, quantity})  => {
 
-    const [products, setProducts] = useContext(cartContext) as [lineItems, React.Dispatch<React.SetStateAction<lineItems>>];
+    const [products, setProducts] = useState(JSON.parse(localStorage.getItem("products") || "{}"))
     // products is an array of objects {price qty}
     return (
     <div className="justify-center">

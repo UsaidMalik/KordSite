@@ -1,6 +1,3 @@
-"use client"
-import React, { useContext } from "react";
-import CartContext from "./_cartContextProvider";
 import AdderToCart from "./_adderToCart"
 
 interface AddToCartProps{
@@ -12,9 +9,7 @@ const AddToCart: React.FC<AddToCartProps>  = ({price, quantity})  => {
     return (
 
     <div>
-        <CartContext>
-            <AdderToCart price={price} quantity={quantity}/>
-        </CartContext>
+        <AdderToCart price={price} quantity={quantity}/>
     </div>
     )
 }
