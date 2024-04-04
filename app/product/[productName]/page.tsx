@@ -13,11 +13,11 @@ export default async function Page({ params }: { params: { productName: string }
 
       <div className='grid grid-cols-2 gap-4'> {/* this is the top images container which will be the two columns */}
 
-      <div className='flex justify-center mx-16'>{/*this here is the left side product slider stuff */}
+      <div className='flex justify-center mx-16 w-3/4 items-center'>{/*this here is the left side product slider stuff */}
         <ProductImageSlider productImagePaths={productData.imagePaths}/>
       </div>
 
-    <div className='flex-col justify-center w-1/2'>{/*this here is the right side product info */}
+    <div className='flex-col justify-center items-center'>{/*this here is the right side product info */}
       <h6 className='text-bold text-4xl'>
         {productData.productFullName}
       </h6> 

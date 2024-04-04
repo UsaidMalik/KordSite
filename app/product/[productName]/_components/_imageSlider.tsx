@@ -25,14 +25,14 @@ const ProductImageSlider : React.FC<ProductImageSliderProps> = ({productImagePat
 
    return (
    
-   <div className="relative m-0 w-96 pb-10 mx-0">
-   <div className="relative w-96 h-96">
+   <div className="relative m-2 w-auto h-auto pb-10 mx-0">
+   <div className="relative w-auto">
      <Image 
        src={`/${productImagePaths[currentIdx]}`} 
-       layout="fill" 
        alt={`Image of A Product`}
-       objectFit="fill" 
        className="m-0 p-0 w-full"
+       width={1280}
+       height={1280}
      >
      </Image>
      <button onClick={prevImage} className="absolute left-0 ml-1 top-1/2 prev w-8 h-8">&#10094;</button>

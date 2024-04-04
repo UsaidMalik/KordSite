@@ -22,7 +22,7 @@ const CheckoutButton = () => {
   
   const products = localStorage.getItem("products") || "{}"
   return (
-    <form action="checkout/api" method="POST">
+    <form action="/checkout/api" method="POST">
       <input type="hidden" name="products" value={products}/>
       <section>
         <button type="submit" role="link">
@@ -41,17 +41,17 @@ const CheckoutButton = () => {
           }
           button {
             height: 36px;
-            background: #556cd6;
+            background: rgb(106, 205, 111);
             border-radius: 4px;
             color: white;
             border: 0;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.2s ease;
+            transition: all 0.7s ease;
             box-shadow: 0px 4px 5.5px 0px rgba(0, 0, 0, 0.07);
           }
           button:hover {
-            opacity: 0.8;
+            opacity: 0.7;
           }
         `}
       </style>

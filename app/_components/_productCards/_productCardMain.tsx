@@ -10,17 +10,16 @@ interface ProductCardProps {
 const ProductCard: React.FC<ProductCardProps> = ({productName}) => {
   const productDetails = products[productName]
   return (
-    <div>
-        <div className="relative">
+    <div className='relative h-96 w-96'>
+        <div className="relative h-3/4 w-3/4">
           <Link href="/product/[productName]" as={`/product/${productName}`}>
           <Image 
           src={`/productImages/${productDetails.imageDirectoryName}/thumbnail.jpg`}
           alt={productDetails.productName}
           objectFit="cover"
+          layout="fill"
           className="transition-all duration-500
            ease-in-out transform hover:scale-95 hover:opacity-75"
-          height={300}
-          width={300}
           />
           </Link>
         </div>

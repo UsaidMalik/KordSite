@@ -12,7 +12,6 @@ const metadata: Metadata = {
   description: 'kord keyboards',
 }
 
-
 const roboto = Roboto_Slab({
   subsets: ['latin'],
 })
