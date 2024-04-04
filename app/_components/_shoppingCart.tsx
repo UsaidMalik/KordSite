@@ -50,7 +50,7 @@ const ShoppingCart = () => {
         </span>
 
         {drawerFlag && ( 
-        <div className="fixed top-0 right-0 w-1/8 h-screen 
+        <div className="fixed top-0 right-0 w-96 h-screen 
         bg-black text-white overflow-y-scroll z-50 p-4 
         transition-all duration-1000 ease-in-out">
           <div className='top-0 m-0'>
@@ -60,9 +60,12 @@ const ShoppingCart = () => {
               onClick={() => setDrawerFlag(false)} >
               close
             </span>
-
-            <ProductDisplayCheckout/>
+          {quantity && (
+          <div>
+          <ProductDisplayCheckout/>
           <CheckoutButton />
+          </div>) || !quantity && (<div className='text-white'>Cart is Empty</div>)}
+            
           </div>
         </div>
       )}

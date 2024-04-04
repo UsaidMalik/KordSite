@@ -1,5 +1,5 @@
 export const menu = {
     Home: "/",
-    Mousepads: "/cultural-mousepads",
-    Artisans: "/artisan-keycaps"
+    Mousepads: "/collections/cultural-mousepads",
+    Artisans: "/collections/artisan-keycaps"
 }
