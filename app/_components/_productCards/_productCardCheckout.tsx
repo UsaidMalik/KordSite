@@ -11,6 +11,7 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({productName, qty, priceID}) => {
   const productDetails = products[productName]
+
   const [visibile, setVisible] = useState(true)
   const removeProduct = () => {
     setVisible(false);
@@ -40,7 +41,7 @@ const ProductCard: React.FC<ProductCardProps> = ({productName, qty, priceID}) =>
               close
             </span>
         <div className="text-lg">
-          {productName}
+          {productDetails.thumbnailName}
         </div>
         <div className="text-sm">
           {qty}

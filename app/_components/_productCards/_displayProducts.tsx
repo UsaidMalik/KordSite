@@ -9,7 +9,7 @@ interface DisplayProductProps{
 }
   
 
-const ProductDisplay: React.FC<DisplayProductProps>  = ({rows, columns, products}) => {
+const ProductDisplay: React.FC<DisplayProductProps>  = ({rows, products}) => {
   
     const productCards = products.map((productName) => (<ProductCard key={productName} productName={productName}/>)) 
 

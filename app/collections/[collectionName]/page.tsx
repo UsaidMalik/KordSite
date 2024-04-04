@@ -9,9 +9,10 @@ export default async function Page({ params }: { params: { collectionName: strin
     const collection = JSON.parse(bytes + '')[collectionName]
           
   return (
-    <div>
-   
-    <ProductDisplay rows={1} columns={4} products={collection}/>
+    <div className="flex justify-center m-0">
+    <div className="p-10">
+        <ProductDisplay rows={1} columns={4} products={collection}/>
     </div>
+</div>
   );
 }

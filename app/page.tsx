@@ -11,6 +11,7 @@ export default function Home() {
     <div className="flex justify-center items-center h-96 bg-black">
       
     <div className="w-1/2 relative h-full opacity-50 hover:opacity-100 transition-opacity duration-500 ease-in-out">
+      <Link href="/product/Obsidian-Sengakuji">
           <Image 
           src="/main-page/2.jpg" 
           alt="Kord Obsidian Sengakuji Keycap"
@@ -18,15 +19,18 @@ export default function Home() {
           fill={true}
           className=""
           />
+      </Link>
     </div>
 
      <div className="w-1/2 relative h-full opacity-50 hover:opacity-100 transition-opacity duration-500 ease-in-out">
+     <Link href="/product/Arabic-Oasis-Mousepad">
           <Image 
           src="/main-page/10.jpg" 
           objectFit="cover"
           alt="Kord Mousepad Image"
           fill={true}
           />
+        </Link>
     </div>
 
     <div className="absolute inset-10 flex flex-col items-center justify-center text-center m-0 p-0" style={{pointerEvents: "none"}}>

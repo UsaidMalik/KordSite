@@ -1,5 +1,7 @@
 {
     "cultural-mousepads" : ["Sunset-Oasis-Mousepad","Arabic-Oasis-Mousepad" ],
     "artisan-keycaps": ["Obsidian-Sengakuji", "Kilauea-Volcano", "Fuji-Cherry", "Trango-Cliffs", 
-    "Tianzi-Stone-Forest", "Great-Wall",  "Everest-Mountain" ]
+    "Tianzi-Stone-Forest", "Great-Wall",  "Everest-Mountain" ],
+    "all": ["Obsidian-Sengakuji", "Kilauea-Volcano", "Fuji-Cherry", "Trango-Cliffs", 
+    "Tianzi-Stone-Forest", "Great-Wall",  "Everest-Mountain", "Sunset-Oasis-Mousepad","Arabic-Oasis-Mousepad" ]
 }
