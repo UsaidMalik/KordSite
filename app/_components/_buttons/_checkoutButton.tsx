@@ -32,7 +32,6 @@ const CheckoutButton = () => {
       <style jsx>
         {`
           section {
-            background: #ffffff;
             display: flex;
             flex-direction: column;
             width: 400px;

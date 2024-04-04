@@ -1,18 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import "../globalicons.css"
-import Link  from 'next/link';
+import ProductDisplayCheckout from "./_productCards/_productDisplayCheckout"
+import CheckoutButton from './_buttons/_checkoutButton';
+
+function calcProductQuantity(){
+  let quantity = 0;
+  const products = JSON.parse(localStorage.getItem("products") || "{}")
+  for (let key in products){
+    quantity += products[key].qty || 0
+  }
+  return quantity;
+}
 
 const ShoppingCart = () => {
 
-  function calcProductQuantity(){
-    let quantity = 0;
-    const products = JSON.parse(localStorage.getItem("products") || "{}")
-    for (let key in products){
-      quantity += products[key].qty || 0
-    }
-    return quantity;
-  }
-
+  const [drawerFlag, setDrawerFlag] = useState(false);
   const [quantity, setQuantitiy] = useState(calcProductQuantity())
   
   useEffect(() => {
@@ -35,8 +37,8 @@ const ShoppingCart = () => {
   // Calculate the total number of items in the cart
   return (
     <div>
-      <Link href="/my-cart">
-        <span className='material-symbols-outlined text-3xl relative'>
+        <span className='material-symbols-outlined text-3xl relative'
+          onClick={() => setDrawerFlag(!drawerFlag)} >
           shopping_bag
           {quantity > 0 && (
             <span
@@ -46,7 +48,25 @@ const ShoppingCart = () => {
             </span>
           )}
         </span>
-      </Link>
+
+        {drawerFlag && ( 
+        <div className="fixed top-0 right-0 w-1/8 h-screen 
+        bg-black text-white overflow-y-scroll z-50 p-4 
+        transition-all duration-1000 ease-in-out">
+          <div className='top-0 m-0'>
+
+          <span className='material-symbols-outlined text-3xl cursor-pointer 
+          transform transition-transform duration-200 hover:scale-90 hover:text-gray-500' 
+              onClick={() => setDrawerFlag(false)} >
+              close
+            </span>
+
+            <ProductDisplayCheckout/>
+          <CheckoutButton />
+          </div>
+        </div>
+      )}
+
     </div>
   );
 };

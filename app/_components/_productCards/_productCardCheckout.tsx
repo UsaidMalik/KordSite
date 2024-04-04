@@ -12,24 +12,31 @@ const ProductCard: React.FC<ProductCardProps> = ({productName, qty}) => {
   const productDetails = products[productName]
 
   return (
-    <div>
-        <div className="relative">
-          <Link href="/product/[productName]" as={`/product/${productDetails.imageDirectoryName}`}>
+    <div className="flex items-center w-full border border-black p-2">
+        <div className="w-1/4 h-1/4 mr-2">
           <Image 
           src={`/productImages/${productDetails.imageDirectoryName}/thumbnail.jpg`}
-          alt="Kord Obsidian Sengakuji Keycap"
+          alt={productDetails.thumbnailName}
           objectFit="cover"
-          className="transition-all duration-500
-           ease-in-out transform hover:scale-95 hover:opacity-75"
-          height={300}
-          width={300}
+          height={200}
+          width={200}
           />
-          </Link>
         </div>
 
+        <div className="w-2/3 text-right">
         <div className="text-lg">
-          Quantity: {qty}
+          {productName}
         </div>
+        <div className="text-sm">
+          {qty}
+        </div>
+        <div className="text-sm">
+          ${productDetails.price}
+        </div>
+
+        
+      </div>
+      
     </div>
   );
 };
