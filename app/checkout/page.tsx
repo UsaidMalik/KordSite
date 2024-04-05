@@ -1,5 +1,6 @@
 "use client"
 import { useSearchParams } from 'next/navigation'
+import {Suspense} from 'react'
 
 export default  function Page() {
 
@@ -8,6 +9,7 @@ export default  function Page() {
 
   return (
     <div className='py-10'>
+      <Suspense fallback={<div>Loading...</div>}>
     {canceled == "true" && 
     <div className="text-center items-center text-black">
         <p className='font-bold text-5xl mb-10'>You're All Set!</p>
@@ -17,6 +19,7 @@ export default  function Page() {
      <p className='font-bold text-5xl mb-10'>Your Cart Is Empty!</p>
      <p className='text-sm'>Keep shopping around until you find something you love</p>
  </div> }
+ </Suspense>
   </div>
   )
 }
