@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import products from "../../_lib/products.json";
 import {useState} from "react"
-import { randomFill } from 'crypto';
 
 interface ProductCardProps {
   productName: string;
