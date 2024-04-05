@@ -18,7 +18,7 @@ function getImages(productImageDir) {
 const products = {
     "Obsidian-Sengakuji" : {
         price: 25.95,
-        description: "nothing to see here",
+        description: "Introducing the mesmerizing Obsidian Sengakuji Artisan Keycap – a true masterpiece crafted with passion and precision. Immerse yourself in the world of ancient Japanese samurai culture, as this exquisite keycap showcases a meticulously detailed samurai dojo captured within its translucent resin confines.",
         imageDirectoryName: "Obsidian-Sengakuji",
         imagePaths: [],
         thumbnailName: "Obsidian Sengakuji",
@@ -27,7 +27,7 @@ const products = {
     },
     "Sunset-Oasis-Mousepad" : {
         price: 25.95,
-        description: "nothing to see here",
+        description: "Bring the mesmerizing beauty of a sun setting on a desert landscape to your workspace with the Sunset Oasis Mousepad. Inspired by the enchanting scenery of a desert evening, this mousepad is a true fusion of art and functionality.",
         imageDirectoryName: "Sunrise-Oasis",
         imagePaths: [],
         thumbnailName: "Sunset Oasis",
@@ -45,7 +45,7 @@ const products = {
     },
     "Arabic-Oasis-Mousepad" : {
         price: 25.95,
-        description: "nothing to see here",
+        description: 'Immerse yourself in the allure of the Arabic Oasis Mousepad, where artistry and functionality merge into a stunning monochrome masterpiece. This mousepad showcases a unique and captivating design, where the sun and the desert landscape are beautifully crafted using elegant Arabic lettering that gracefully translates to "Kord Keyboards."',
         imageDirectoryName: "Arabic-Oasis",
         imagePaths: [],
         thumbnailName: "Arabic Oasis",
@@ -54,7 +54,7 @@ const products = {
     },
     "Fuji-Cherry" : {
         price: 25.95,
-        description: "nothing to see here",
+        description: "Your Keyboard Will Peak. The Cherry Fuji Mountain brings life to your keyboard. Enjoy the swift, cold, winds of Mount Fuji inside this keycap. Designed to improve your keyboard experience. The apex of your mechanical keyboard.",
         imageDirectoryName: "Cherry-Everest",
         imagePaths: [],
         thumbnailName: "Cherry Fuji",
@@ -72,7 +72,7 @@ const products = {
     },
     "Tianzi-Stone-Forest" : {
         price: 25.95,
-        description: "nothing to see here",
+        description: "The mysteries of the world. The intriguing stone forest. The Stone Forest Keycap embodies these feelings. Bring the mysteries of nature to your keyboard. Bring the Stone Forest to your keyboard.        ",
         imageDirectoryName: "Tianzi",
         imagePaths: [],
         thumbnailName: "Tianzi Stone Forest",
@@ -80,7 +80,7 @@ const products = {
         productFullName: "Tianzi Stone Forest Keycap",
     }, "Great-Wall" : {
         price: 25.95,
-        description: "nothing to see here",
+        description: "The wonder of the early era calls to your keyboard. The Great Wall Keycap emanates phenomenal resistance and tremendous charm. Attain the unyielding tenacity of the Ten-Thousand-Li wall. Grasp the greatness of your keyboard with every touch.        ",
         imageDirectoryName: "Great-Wall",
         imagePaths: [],
         thumbnailName: "The Great Wall",

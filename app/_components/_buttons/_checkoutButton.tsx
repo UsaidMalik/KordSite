@@ -34,7 +34,7 @@ const CheckoutButton = () => {
           section {
             display: flex;
             flex-direction: column;
-            width: 400px;
+            width: 100%;
             height: 112px;
             border-radius: 6px;
             justify-content: space-between;

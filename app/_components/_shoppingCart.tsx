@@ -64,7 +64,10 @@ const ShoppingCart = () => {
           <div>
           <ProductDisplayCheckout/>
           <CheckoutButton />
-          </div>) || !quantity && (<div className='text-white'>Cart is Empty</div>)}
+          </div>) || !quantity && (<div className='text-white text-center'>
+            <p className='font-bold text-2xl text-center'>Cart's Empty!</p>
+            <br></br>
+            <p className='text-center'>Keep shopping around until you find something you love</p></div>)}
             
           </div>
         </div>

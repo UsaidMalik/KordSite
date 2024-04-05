@@ -7,7 +7,7 @@ export default async function Page({ params }: { params: { productName: string }
   const productName = params.productName
   const bytes = await fs.readFile(process.cwd() + "/app/_lib/products.JSON")
   const productData = JSON.parse(bytes + '')[productName]
-  
+
   return (
     <div className='py-10'>
 
@@ -24,10 +24,10 @@ export default async function Page({ params }: { params: { productName: string }
       <h6>
         ${productData.price}
       </h6> 
+      <AddToCart price={productData.stripeID} quantity={1} productName={productName}/>
       <p>
         {productData.description}
       </p> 
-      <AddToCart price={productData.stripeID} quantity={1} productName={productName}/>
     </div>   
     
    </div>

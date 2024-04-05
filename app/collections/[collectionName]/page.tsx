@@ -9,9 +9,18 @@ export default async function Page({ params }: { params: { collectionName: strin
     const collection = JSON.parse(bytes + '')[collectionName]
           
   return (
-    <div className="flex justify-center m-0">
-    <div className="p-10">
-        <ProductDisplay rows={1} columns={4} products={collection}/>
+    <div className="px-32 py-10">
+    <div className="mb-10 p-0">
+      <p className="font-bold text-3xl mb-4">{collection.name}</p>
+      <p className="w-3/4 text-grey text-justify">{collection.description}</p>
+    </div>
+
+    <div className="flex justify-center">
+        <hr className="border-gray-400 my-8 rounded-full"/> {/* This is the small grey line break */}
+    </div>
+
+    <div className="">
+        <ProductDisplay rows={1} columns={4} products={collection.products}/>
     </div>
 </div>
   );

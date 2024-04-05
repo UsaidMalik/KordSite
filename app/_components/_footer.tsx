@@ -35,8 +35,9 @@ export default function KordFooter(){
       </li>
     ))}
   </ul>
-  <div className="text-sm pr-16">
-    © 2024, Kord Powered by The Kommunity
+  <div className="text-sm pr-16 text-right">
+   <p> © 2024, Kord Powered by The Kommunity</p>
+   <p>Email: support@kord.fun</p> 
   </div>
 
 </div>
