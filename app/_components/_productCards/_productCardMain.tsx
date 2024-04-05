@@ -5,17 +5,33 @@ import products from "../../_lib/products.json";
 interface ProductCardProps {
   productName: string;
 }
+
   
+type Product = {
+  price: number;
+  description: string;
+  imageDirectoryName: string;
+  imagePaths: string[];
+  thumbnailName: string;
+  stripeID: string;
+  productFullName: string;
+  // add other product properties here
+};
+
+type Products = { [key: string]: Product };
+
 
 const ProductCard: React.FC<ProductCardProps> = ({productName}) => {
-  const productDetails = products[productName]
+  const myProducts : Products = products;
+  const productDetails : Product = myProducts[productName]
+
   return (
     <div className='relative h-96 w-96'>
         <div className="relative h-3/4 w-3/4">
           <Link href="/product/[productName]" as={`/product/${productName}`}>
           <Image 
           src={`/productImages/${productDetails.imageDirectoryName}/thumbnail.jpg`}
-          alt={productDetails.productName}
+          alt={productDetails.productFullName}
           objectFit="cover"
           layout="fill"
           className="transition-all duration-500

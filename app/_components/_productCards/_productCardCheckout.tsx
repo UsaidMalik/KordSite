@@ -8,9 +8,22 @@ interface ProductCardProps {
   priceID: string,
 }
   
+type Product = {
+  price: number;
+  description: string;
+  imageDirectoryName: string;
+  imagePaths: string[];
+  thumbnailName: string;
+  stripeID: string;
+  productFullName: string;
+  // add other product properties here
+};
+
+type Products = { [key: string]: Product };
 
 const ProductCard: React.FC<ProductCardProps> = ({productName, qty, priceID}) => {
-  const productDetails = products[productName]
+  const myProducts : Products = products;
+  const productDetails : Product = myProducts[productName]
 
   const [visibile, setVisible] = useState(true)
   const [quantity, setQuantity] = useState(qty)
