@@ -31,8 +31,8 @@ const ProductImageSlider : React.FC<ProductImageSliderProps> = ({productImagePat
        src={`/${productImagePaths[currentIdx]}`} 
        alt={`Image of A Product`}
        className="m-0 p-0 w-full"
-       width={1280}
-       height={1280}
+       width={720}
+       height={720}
      >
      </Image>
      <button onClick={prevImage} className="absolute left-0 ml-1 top-1/2 prev w-8 h-8">&#10094;</button>
@@ -49,7 +49,8 @@ const ProductImageSlider : React.FC<ProductImageSliderProps> = ({productImagePat
          height={30}
          alt="Image of product"
          onClick={() => selectImage(idx)} 
-         className="mx-1 hover:opacity-50 cursor-pointer transition-opacity duration-500 ease-in-out"
+         className={`mx-1 cursor-pointer transition-opacity duration-500
+          ease-in-out ${currentIdx === idx ? 'opacity-50' : ''}`}
        />
      ))}
    </div>

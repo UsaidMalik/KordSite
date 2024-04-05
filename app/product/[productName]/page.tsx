@@ -21,11 +21,11 @@ export default async function Page({ params }: { params: { productName: string }
       <h6 className='text-bold text-4xl'>
         {productData.productFullName}
       </h6> 
-      <h6>
+      <h6 className="mb-4">
         ${productData.price}
       </h6> 
       <AddToCart price={productData.stripeID} quantity={1} productName={productName}/>
-      <p>
+      <p className='text-justify w-1/2 my-4'>
         {productData.description}
       </p> 
     </div>   
