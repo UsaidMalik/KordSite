@@ -22,7 +22,7 @@ const products = {
         imageDirectoryName: "Obsidian-Sengakuji",
         imagePaths: [],
         thumbnailName: "Obsidian Sengakuji",
-        stripeID: "price_1OvbqFIajtiRYLJ07eeC9npD",
+        stripeID: "price_1P270QIajtiRYLJ0Q4DUIHEq",
         productFullName: "Obsidian Sengakuji Artisan Keycap",
     },
     "Sunset-Oasis-Mousepad" : {
@@ -31,7 +31,7 @@ const products = {
         imageDirectoryName: "Sunrise-Oasis",
         imagePaths: [],
         thumbnailName: "Sunset Oasis",
-        stripeID: "price_1P1OrpIajtiRYLJ0QpFkUkCq",
+        stripeID: "price_1P270AIajtiRYLJ0ZEGlecn1",
         productFullName: "Sunset Oasis Mousepad",
     },
     "Kilauea-Volcano" : {
@@ -40,7 +40,7 @@ const products = {
         imageDirectoryName: "Kilauea-Volcano",
         imagePaths: [],
         thumbnailName: "Kilauea",
-        stripeID: "price_1P1OpXIajtiRYLJ0NgQysFzM",
+        stripeID: "price_1P270TIajtiRYLJ0Geh2TkWa",
         productFullName: "Kilauea Volcano Escape Keycap",
     },
     "Arabic-Oasis-Mousepad" : {
@@ -49,7 +49,7 @@ const products = {
         imageDirectoryName: "Arabic-Oasis",
         imagePaths: [],
         thumbnailName: "Arabic Oasis",
-        stripeID: "price_1P1OrQIajtiRYLJ0By5d0QSw",
+        stripeID: "price_1P270DIajtiRYLJ0CMKRQhld",
         productFullName: "Arabic Oasis Mousepad",
     },
     "Fuji-Cherry" : {
@@ -58,7 +58,7 @@ const products = {
         imageDirectoryName: "Cherry-Everest",
         imagePaths: [],
         thumbnailName: "Cherry Fuji",
-        stripeID: "price_1P1OqvIajtiRYLJ0EolQ478W",
+        stripeID: "price_1P270wIajtiRYLJ0SKMeSaVg",
         productFullName: "Cherry Mount Fuji Artisan Keycap",
     },
     "Trango-Cliffs" : {
@@ -67,7 +67,7 @@ const products = {
         imageDirectoryName: "Trango",
         imagePaths: [],
         thumbnailName: "Trango Cliffs",
-        stripeID: "price_1P1OsiIajtiRYLJ0UNwVGbva",
+        stripeID: "price_1P2705IajtiRYLJ0KQQFro8M",
         productFullName: "Trango Cliffs Enter Keycap",
     },
     "Tianzi-Stone-Forest" : {
@@ -76,7 +76,7 @@ const products = {
         imageDirectoryName: "Tianzi",
         imagePaths: [],
         thumbnailName: "Tianzi Stone Forest",
-        stripeID: "price_1P1OsaIajtiRYLJ0pHseBX8k",
+        stripeID: "price_1P2707IajtiRYLJ0vidklvs6",
         productFullName: "Tianzi Stone Forest Keycap",
     }, "Great-Wall" : {
         price: 25.95,
@@ -84,7 +84,7 @@ const products = {
         imageDirectoryName: "Great-Wall",
         imagePaths: [],
         thumbnailName: "The Great Wall",
-        stripeID: "price_1P1OsPIajtiRYLJ0NfehZIGD",
+        stripeID: "price_1P270tIajtiRYLJ0THSTHbcp",
         productFullName: "Great Wall Artisan Keycap",
     }, "Everest-Mountain" : {
         price: 25.95,
@@ -92,7 +92,7 @@ const products = {
         imageDirectoryName: "Everest",
         imagePaths: [],
         thumbnailName: "Fuji",
-        stripeID: "price_1P1OtWIajtiRYLJ0HiqEjpfx",
+        stripeID: "price_1P2700IajtiRYLJ0AVSCpglu",
         productFullName: "Mount Fuji Escape Keycap",
     },
 }
