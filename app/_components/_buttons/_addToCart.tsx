@@ -16,7 +16,7 @@ const AddToCart: React.FC<AddToCartProps>  = ({price, quantity, productName})  =
         <button className="border-black border-2 text-black hover:bg-black
         w-1/2 text-xl hover:text-white transition-all duration-300 transform hover:scale-95" onClick={() => {
 
-        setProducts((prevProducts)=> {
+        setProducts((prevProducts: any)=> {
             const newProducts = {
                 ...prevProducts,
                 [price]: {qty: (Number(prevProducts[price]?.qty) || 0) + quantity, name: productName},
