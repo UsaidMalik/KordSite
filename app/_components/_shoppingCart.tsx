@@ -3,16 +3,16 @@ import "../globalicons.css"
 import ProductDisplayCheckout from "./_productCards/_productDisplayCheckout"
 import CheckoutButton from './_buttons/_checkoutButton';
 
-function calcProductQuantity(){
-  let quantity = 0;
-  const products = JSON.parse(localStorage.getItem("products") || "{}")
-  for (let key in products){
-    quantity += products[key].qty || 0
-  }
-  return quantity;
-}
-
 const ShoppingCart = () => {
+  
+  function calcProductQuantity(){
+    let quantity = 0;
+    const products = JSON.parse(localStorage.getItem("products") || "{}")
+    for (let key in products){
+      quantity += products[key].qty || 0
+    }
+    return quantity;
+  }
 
   const [drawerFlag, setDrawerFlag] = useState(false);
   const [quantity, setQuantitiy] = useState(calcProductQuantity())
