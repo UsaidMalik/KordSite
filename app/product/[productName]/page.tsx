@@ -5,7 +5,7 @@ import {promises as fs} from 'fs';
 export default async function Page({ params }: { params: { productName: string } }) {
 //  const [productData, setData] = useState(null);
   const productName = params.productName
-  const bytes = await fs.readFile(process.cwd() + "/app/_lib/products.JSON")
+  const bytes = await fs.readFile(process.cwd() + "/app/_lib/products.json")
   const productData = JSON.parse(bytes + '')[productName]
 
   return (
