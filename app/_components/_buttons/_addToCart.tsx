@@ -21,7 +21,11 @@ const AddToCart: React.FC<AddToCartProps>  = ({price, quantity, productName})  =
                 ...prevProducts,
                 [price]: {qty: (Number(prevProducts[price]?.qty) || 0) + quantity, name: productName},
             };
-            localStorage.setItem('products', JSON.stringify(newProducts));
+            if (typeof window !== 'undefined') {
+                // Now we are in the browser and can safely use localStorage
+                localStorage.setItem('products', JSON.stringify(newProducts));
+            }
+              
             window.dispatchEvent(new Event('buttonClick')) // adding in the window event to see button clikc
             return newProducts;
         });

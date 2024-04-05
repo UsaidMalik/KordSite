@@ -20,7 +20,12 @@ const CheckoutButton = () => {
     }
   }, []);
   
-  const products = localStorage.getItem("products") || "{}"
+  let products = "{}"
+  if (typeof window !== 'undefined') {
+    // Now we are in the browser and can safely use localStorage
+     products = localStorage.getItem("products") || "{}"
+  }
+  
   return (
     <form action="/checkout/api" method="POST">
       <input type="hidden" name="products" value={products}/>

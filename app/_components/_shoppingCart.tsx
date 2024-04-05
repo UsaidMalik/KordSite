@@ -7,7 +7,10 @@ const ShoppingCart = () => {
   
   function calcProductQuantity(){
     let quantity = 0;
-    const products = JSON.parse(localStorage.getItem("products") || "{}")
+    let products: any = {}
+    if (typeof window !== 'undefined') {
+     products = JSON.parse(localStorage.getItem("products") || "{}")
+    }
     for (let key in products){
       quantity += products[key].qty || 0
     }
