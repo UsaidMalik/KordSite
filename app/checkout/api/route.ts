@@ -4,7 +4,14 @@ export async function POST(
   req: Request,
 ) {
   const formData = await req.formData()
-  const products = await JSON.parse(formData.get("products"))
+  const productsData = formData.get("products");
+
+  if (productsData === null) {
+    throw new Error("Products data is missing");
+  }
+
+  const products = JSON.parse(productsData as string);
+
   let lineItems = [];
   for (let price in products){
     lineItems.push({"price": price, "quantity": products[price].qty})
