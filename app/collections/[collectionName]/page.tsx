@@ -19,7 +19,7 @@ export default async function Page({ params }: { params: { collectionName: strin
     </div>
 
     <div className="w-auto">
-        <ProductDisplay rows={1} columns={4} products={collection.products}/>
+        <ProductDisplay products={collection.products}/>
     </div>
 </div>
   );
