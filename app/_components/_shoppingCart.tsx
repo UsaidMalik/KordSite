@@ -53,7 +53,7 @@ const ShoppingCart = () => {
         </span>
 
         {drawerFlag && ( 
-        <div className="fixed top-0 right-0 w-96 h-screen 
+        <div className="fixed top-0 right-0 w-screen md:w-96 h-screen 
         bg-black text-white overflow-y-scroll z-50 p-4 
         transition-all duration-1000 ease-in-out">
           <div className='top-0 m-0'>
