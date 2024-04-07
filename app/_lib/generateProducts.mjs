@@ -105,7 +105,7 @@ Object.keys(products).forEach((productName) => {
 });
 
 console.log(products)
-const filePath = "C:/Users/Usaid/Projects/kordsite/app/_lib/products.JSON"
+const filePath = "C:/Users/Usaid/Projects/kordsite/app/_lib/products.ts"
 console.log(filePath)
 
 fs.promises.writeFile(filePath, JSON.stringify(products));

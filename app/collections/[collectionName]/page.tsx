@@ -1,12 +1,11 @@
 import {promises as fs} from "fs"
 import ProductDisplay from "../../_components/_productCards/_displayProducts";
-
+import { collections } from "@/app/_lib/collections";
 
 export default async function Page({ params }: { params: { collectionName: string } }) {
         //  const [productData, setData] = useState(null);
     const collectionName = params.collectionName
-    const bytes = await fs.readFile(process.cwd() + "/app/_lib/collections.json")
-    const collection = JSON.parse(bytes + '')[collectionName]
+    const collection = collections[collectionName]
           
   return (
     <div className="px-32 py-10">

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import products from "../../_lib/products.json";
+import products from "../../_lib/products";
 import {useState} from "react"
 
 interface ProductCardProps {

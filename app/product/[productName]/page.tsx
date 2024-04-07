@@ -1,12 +1,12 @@
 import ProductImageSlider from './_components/_imageSlider';
 import AddToCart from '../../_components/_buttons/_addToCart';
 import {promises as fs} from 'fs';
+import { Product, products } from '@/app/_lib/products';
 
 export default async function Page({ params }: { params: { productName: string } }) {
 //  const [productData, setData] = useState(null);
-  const productName = params.productName
-  const bytes = await fs.readFile(process.cwd() + "/app/_lib/products.json")
-  const productData = JSON.parse(bytes + '')[productName]
+  const productName : string = params.productName
+  const productData : Product = products[productName]
 
   return (
     <div className='py-10'>
