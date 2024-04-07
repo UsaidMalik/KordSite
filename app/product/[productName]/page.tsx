@@ -1,6 +1,5 @@
 import ProductImageSlider from './_components/_imageSlider';
 import AddToCart from '../../_components/_buttons/_addToCart';
-import {promises as fs} from 'fs';
 import { Product, products } from '@/app/_lib/products';
 
 export default async function Page({ params }: { params: { productName: string } }) {
