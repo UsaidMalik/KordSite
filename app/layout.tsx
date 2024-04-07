@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <header className="p-4 md:p-32">
+        <header className="p-4">
         {!isMobile && <MenuItemsLogo/>
         }
 
