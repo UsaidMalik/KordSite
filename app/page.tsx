@@ -47,24 +47,23 @@ export default function Home() {
   {isMobile && 
   <div className="flex justify-center items-center h-96 bg-black">
       
-  <div className="w-full relative h-full opacity-50 hover:opacity-100 transition-opacity duration-500 ease-in-out">
+  <div className="w-full relative h-full hover:opacity-100 transition-opacity duration-500 ease-in-out">
     <Link href="/product/Obsidian-Sengakuji">
         <Image 
         src="/main-page/2.jpg" 
         alt="Kord Obsidian Sengakuji Keycap"
         objectFit="cover"
         fill={true}
-        className=""
+        className="opacity-50"
         />
     </Link>
-  </div>
-
-  <div className="absolute w-fit top-10 md:inset-10 items-center justify-center text-center m-0 my-16 h-full" style={{pointerEvents: "none"}}>
+    <div className="sticky w-fit top-10 md:inset-10 items-center justify-center text-center m-0 my-16 h-full opacity-100" style={{pointerEvents: "none"}}>
     <p className="text-white text-4xl font-bold drop-shadow-2xl mt-4 mb-32">
       Transform Your Setup Into A Cultural Masterpiece
     </p>
     <br></br>
     <Link href="collections/all" className="px-4 py-2 my-4 rounded-full text-lg transition duration-700 ease-in-out bg-white hover:text-gray-800 hover:bg-gray-300 hover:text-base" style={{pointerEvents: "auto"}}>DISCOVER</Link>
+  </div>
   </div>
 </div>
   }
