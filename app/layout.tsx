@@ -6,6 +6,8 @@ import './globalicons.css'
 import type { Metadata } from "next";
 import MenuItemsLogo from "./_components/_logoMenuItems";
 import KordFooter from "./_components/_footer";
+import {useMediaQuery} from 'react-responsive'
+import Link from "next/link";
 
 const metadata: Metadata = {
   title: 'Kord Keyboards',
@@ -21,14 +23,26 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+
   return (
     <html lang="en">
       <body>
-        <header>
+        <header className="p-4 md:p-32">
+        {!isMobile && <MenuItemsLogo/>
+        }
 
-         <MenuItemsLogo/> {/* This is here as a server component */}
-        
-        <div className="pr-0 justify-end">{/* Client componenet */}
+        {
+          isMobile && <div>
+            <span className="material-symbols-outlined">menu</span>
+            <Link href="/">
+              <img alt="Kord Keyboards Logo White" src="/Kord Logo White.png" className="justify-center ml-28 w-3/4"/>
+            </Link>
+          </div>
+        }
+
+
+        <div className="pr-0 justify-end m-0">{/* Client componenet */}
 
           <ShoppingCart/> 
 
