@@ -1,7 +1,6 @@
 import Link  from 'next/link';
 import Image from 'next/image'
-import products from "../../_lib/products";
-
+import { products } from '@/app/_lib/products';
 interface ProductCardProps {
   productName: string;
 }
