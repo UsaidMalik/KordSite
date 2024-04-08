@@ -24,6 +24,7 @@ const CheckoutButton = () => {
   if (typeof window !== 'undefined') {
     // Now we are in the browser and can safely use localStorage
      products = localStorage.getItem("products") || "{}"
+     
   }
   
   return (

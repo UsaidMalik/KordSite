@@ -11,7 +11,7 @@ export default async function Page({ params }: { params: { collectionName: strin
     <div className="px-12 mx- md:px-32 py-10">
     <div className="mb-10 p-0">
       <p className="font-bold text-3xl mb-4">{collection.name}</p>
-      <p className="w-4/5 md:w-3/4 md:text-grey text-justify text-xl md:text-base">{collection.description}</p>
+      <p className="md:w-3/4 md:text-grey text-justify ">{collection.description}</p>
     </div>
 
     <div className="flex justify-center">
