@@ -22,11 +22,11 @@ function SocialIcon(name: string){
 
 export default function KordFooter(){
     
-    return <footer className="p-2 md:p-4 md:h-24">
+    return <footer className="p-1 md:p-4 md:h-24">
 
-<div className={`flex justify-between w-full ${roboto.className} pl-16`}>
+<div className={`flex justify-between w-full ${roboto.className} md:pl-16`}>
 
-  <ul className="flex space-x-2 md:space-x-4">
+  <ul className="flex space-x-1 md:space-x-4">
     {Object.entries(socials).map(([label, path]) => (
       <li key={label} className={`${roboto.className}`}>
         <Link href={path} target="_blank">
