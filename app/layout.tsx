@@ -24,17 +24,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: '(min-width: 432px)' });
 
   return (
     <html lang="en">
       <body>
         <header className="p-4">
-        {!isMobile && <MenuItemsLogo/>
-        }
-
         {
-          isMobile && <div>
+          !isMobile && <div>
             <MenuMobile/>
             <Link href="/">
               <img alt="Kord Keyboards Logo White" src="/Kord Logo White.png" className="justify-center ml-28 w-3/4"/>
@@ -42,6 +39,8 @@ export default function RootLayout({
           </div>
         }
 
+      {isMobile && <MenuItemsLogo/>
+              } {/*Desktop styles*/}
 
         <div className="pr-0 justify-end m-0">{/* Client componenet */}
 

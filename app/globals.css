@@ -4,11 +4,6 @@
 @import 'tailwindcss/utilities';
 
 
-iframe {
-  width: 100vw;
-  max-width: 100%;
-}
-
 body {
   background-color: rgba(232, 243, 246, 0.492);
   display: grid;
