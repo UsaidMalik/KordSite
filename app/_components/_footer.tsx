@@ -22,7 +22,7 @@ function SocialIcon(name: string){
 
 export default function KordFooter(){
     
-    return <footer className="p-1 md:p-4 md:h-24">
+    return <footer className="px-2 py-4 md:p-4 md:h-24">
 
 <div className={`flex justify-between w-full ${roboto.className} md:pl-16`}>
 
