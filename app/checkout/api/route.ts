@@ -29,6 +29,7 @@ export async function POST(
         shipping_address_collection: {
           allowed_countries: ["US"],
         },
+        allow_promotion_codes:true,
         mode: 'payment',
         success_url: `${requestHeaders.get('origin')}/checkout?status=true`,
         cancel_url: `${requestHeaders.get('origin')}/`,
